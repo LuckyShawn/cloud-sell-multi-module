@@ -3,6 +3,8 @@ package com.shawn.product.VO;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * @Description TODO
  * @Author shawn
@@ -16,4 +18,7 @@ public class ProductVO {
 
     @JsonProperty("type")
     private Integer categoryType;
+
+    @JsonProperty("foods")
+    private List<ProductInfoVO> productInfoVOList;
 }
