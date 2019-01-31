@@ -15,7 +15,7 @@ public class ServerController {
 
     @GetMapping("/msg")
     public String sendMsg(){
-        log.info("product sendMsg");
-        return "Message from product";
+        log.info("product sendMsg 1");
+        return "Message from product 1";
     }
 }

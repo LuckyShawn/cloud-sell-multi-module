@@ -13,3 +13,6 @@ eureka:
   client:
     service-url:
      defauleZone: http://localhost:8761/eureka/
+#PRODUCT:  #随机访问策略
+# ribbon:
+#  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
