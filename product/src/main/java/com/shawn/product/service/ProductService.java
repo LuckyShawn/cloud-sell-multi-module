@@ -1,5 +1,6 @@
 package com.shawn.product.service;
 
+import com.shawn.product.DTO.CartDTO;
 import com.shawn.product.entities.ProductInfo;
 
 import java.util.List;
@@ -22,4 +23,9 @@ public interface ProductService {
      */
     List<ProductInfo> findList(List<String> productIdList);
 
+    /**
+     * 扣库存
+     * @param cartDTOList
+     */
+    void decreaseStock(List<CartDTO> cartDTOList);
 }

@@ -1,5 +1,6 @@
 package com.shawn.product.service.impl;
 
+import com.shawn.product.DTO.CartDTO;
 import com.shawn.product.ProductApplicationTests;
 import com.shawn.product.entities.ProductInfo;
 import com.shawn.product.service.ProductService;
@@ -8,6 +9,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -27,5 +29,12 @@ public class ProductServiceImplTest extends ProductApplicationTests {
     public void findUpAll() {
         List<ProductInfo> list = productService.findUpAll();
         Assert.assertTrue(list.size()>0);
+    }
+
+    @Test
+    public void testDecreasedStocked() throws Exception{
+        CartDTO cartDTO = new CartDTO("157875227953464068",5);
+        productService.decreaseStock(Arrays.asList(cartDTO));
+
     }
 }

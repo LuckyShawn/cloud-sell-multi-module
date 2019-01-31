@@ -1,5 +1,6 @@
 package com.shawn.product.controller;
 
+import com.shawn.product.DTO.CartDTO;
 import com.shawn.product.VO.ProductInfoVO;
 import com.shawn.product.VO.ProductVO;
 import com.shawn.product.VO.ResultVO;
@@ -82,6 +83,11 @@ public class ProductController {
     @PostMapping("/listForOrder")
     public List<ProductInfo> listForOrder(@RequestBody  List<String> productIdList){
         return productService.findList(productIdList);
+    }
+
+    @PostMapping("/decreaseStock")
+    public void decreaseStock(@RequestBody List<CartDTO> cartDTOList){
+        productService.decreaseStock(cartDTOList);
     }
 
     /**
