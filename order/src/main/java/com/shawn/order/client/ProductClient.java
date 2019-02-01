@@ -1,5 +1,6 @@
 package com.shawn.order.client;
 
+import com.shawn.order.dto.CartDTO;
 import com.shawn.order.entities.ProductInfo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,4 +23,7 @@ public interface ProductClient {
     //@RequestBody 此注解需要用post请求
     @PostMapping("/product/listForOrder")
     List<ProductInfo> listForOrder(@RequestBody List<String> productIdList);
+
+    @PostMapping("/product/decreaseStock")
+    void decreaseStock(@RequestBody List<CartDTO> cartDTOList);
 }

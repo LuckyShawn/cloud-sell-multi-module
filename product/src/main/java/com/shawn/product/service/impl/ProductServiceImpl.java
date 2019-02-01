@@ -1,6 +1,6 @@
 package com.shawn.product.service.impl;
 
-import com.shawn.product.DTO.CartDTO;
+import com.shawn.product.dto.CartDTO;
 import com.shawn.product.entities.ProductInfo;
 import com.shawn.product.enums.ProductStatusEnum;
 import com.shawn.product.enums.ResultEnum;

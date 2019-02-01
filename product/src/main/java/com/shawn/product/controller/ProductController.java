@@ -1,6 +1,6 @@
 package com.shawn.product.controller;
 
-import com.shawn.product.DTO.CartDTO;
+import com.shawn.product.dto.CartDTO;
 import com.shawn.product.VO.ProductInfoVO;
 import com.shawn.product.VO.ProductVO;
 import com.shawn.product.VO.ResultVO;
@@ -9,16 +9,13 @@ import com.shawn.product.entities.ProductInfo;
 import com.shawn.product.service.CategoryService;
 import com.shawn.product.service.ProductService;
 import com.shawn.product.utils.ResultVOUtils;
-import jdk.nashorn.internal.objects.annotations.Getter;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * @Description 商品Controller

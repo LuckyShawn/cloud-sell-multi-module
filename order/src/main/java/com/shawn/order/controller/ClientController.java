@@ -1,6 +1,7 @@
 package com.shawn.order.controller;
 
 import com.shawn.order.client.ProductClient;
+import com.shawn.order.dto.CartDTO;
 import com.shawn.order.entities.ProductInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,12 @@ public class ClientController {
 
     @Autowired
     private RestTemplate restTemplate;
+
+    @GetMapping("/productDecreaseStock")
+    public String productDecreaseStock(){
+        productClient.decreaseStock(Arrays.asList(new CartDTO("164103465734242707",5)));
+        return "ok";
+    }
 
     @GetMapping("/listForOrder")
     public String getProductList(){

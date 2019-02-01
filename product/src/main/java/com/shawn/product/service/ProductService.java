@@ -1,6 +1,6 @@
 package com.shawn.product.service;
 
-import com.shawn.product.DTO.CartDTO;
+import com.shawn.product.dto.CartDTO;
 import com.shawn.product.entities.ProductInfo;
 
 import java.util.List;
