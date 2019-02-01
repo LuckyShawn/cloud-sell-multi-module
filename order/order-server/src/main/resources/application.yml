@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: order
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/cloud-sell-order?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+     defauleZone: http://localhost:8761/eureka/
+server:
+  port: 8905
+#PRODUCT:  #随机访问策略
+# ribbon:
+#  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
