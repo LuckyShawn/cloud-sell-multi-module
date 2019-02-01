@@ -5,6 +5,7 @@ import com.shawn.order.dto.CartDTO;
 import com.shawn.order.entities.ProductInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,6 +32,9 @@ public class ClientController {
 
     @Autowired
     private RestTemplate restTemplate;
+
+    @Value("${server.port}")
+    private String port;
 
     @GetMapping("/productDecreaseStock")
     public String productDecreaseStock(){
@@ -67,5 +71,10 @@ public class ClientController {
         //String msg = restTemplate.getForObject("http://PRODUCT/msg",String.class);
         log.info("msg={}", msg);
         return msg;
+    }
+
+    @GetMapping("/port")
+    public String getPort(){
+        return port;
     }
 }
