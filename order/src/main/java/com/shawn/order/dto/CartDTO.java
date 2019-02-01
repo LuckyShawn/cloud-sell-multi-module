@@ -1,4 +1,4 @@
-package com.shawn.product.dto;
+package com.shawn.order.dto;
 
 import lombok.Data;
 
@@ -26,6 +26,4 @@ public class CartDTO {
         this.productId = productId;
         this.productQuantity = productQuantity;
     }
-
-
 }
